@@ -1,0 +1,6 @@
+{
+  "Tiles": "GGFWWGGGWW,GWWGGFFFGG,GGGGGGWWWW,FFGGWWGGGG,GGGGGGGGGG,GGGGGGGGGG,GGGFFFGGGG",
+  "Builds": "SLL  GLL  ,      GG  ,GGS       ,          ,G      LBB,G   G     ,G   G   GG",
+  "PowerLines": "[0,0:1,2];[2,0:6,1];[9,4:8,6];[0,6:4,5];[4,6:7,4]",
+  "StartMoney": "100000000"
+}

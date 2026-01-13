@@ -1,0 +1,19 @@
+<svg width="313" height="312" viewBox="0 0 313 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="220.327" height="220.327" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 156.295 311.59)" fill="#796FFF"/>
+<rect x="99.5005" y="103" width="4" height="72" fill="white"/>
+<rect x="171.5" y="171" width="4" height="72" transform="rotate(90 171.5 171)" fill="white"/>
+<rect x="167.5" y="103" width="4" height="72" fill="white"/>
+<rect x="99.5005" y="107" width="4" height="72" transform="rotate(-90 99.5005 107)" fill="white"/>
+<circle cx="101.5" cy="105" r="11" fill="white"/>
+<circle cx="169.5" cy="105" r="11" fill="white"/>
+<circle cx="101.5" cy="173" r="11" fill="white"/>
+<circle cx="169.5" cy="173" r="11" fill="white"/>
+<rect x="133.5" y="137" width="4" height="72" fill="white"/>
+<rect x="205.5" y="205" width="4" height="72" transform="rotate(90 205.5 205)" fill="white"/>
+<rect x="201.5" y="137" width="4" height="72" fill="white"/>
+<rect x="133.5" y="141" width="4" height="72" transform="rotate(-90 133.5 141)" fill="white"/>
+<circle cx="135.5" cy="139" r="11" fill="white"/>
+<circle cx="203.5" cy="139" r="11" fill="white"/>
+<circle cx="135.5" cy="207" r="11" fill="white"/>
+<circle cx="203.5" cy="207" r="11" fill="white"/>
+</svg>
