@@ -13,10 +13,15 @@ if (!PUBLISHABLE_KEY) {
 
 initGA();
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/overview">
-      <BrowserRouter>
+    <ClerkProvider
+      publishableKey={PUBLISHABLE_KEY}
+      afterSignOutUrl={`${BASE_URL}overview`}
+    >
+      <BrowserRouter basename={BASE_URL}>
         <App />
       </BrowserRouter>
     </ClerkProvider>

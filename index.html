@@ -20,11 +20,11 @@
   <body>
     <script>
       (function () {
-        var base = "/pages/Gaming-for-Electric-Power-Grids/CurrentCrisis";
+        var base = "%BASE_URL%";
         var redirect = window.sessionStorage.getItem("redirect");
         if (!redirect) return;
         window.sessionStorage.removeItem("redirect");
-        var normalized = redirect.charAt(0) === "/" ? redirect : "/" + redirect;
+        var normalized = redirect.charAt(0) === "/" ? redirect.slice(1) : redirect;
         window.history.replaceState(null, "", base + normalized);
       })();
     </script>
