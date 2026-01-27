@@ -23,5 +23,4 @@ jobs:
           else
             git remote add githubcom https://$GH_TOKEN@github.com/currentcrisis123/web-backend.git
           fi
-          git subtree split --prefix=backend -b backend-only
-          git push --force githubcom backend-only:main
+          git push --force --prune githubcom "refs/heads/*:refs/heads/*" "refs/tags/*:refs/tags/*"
