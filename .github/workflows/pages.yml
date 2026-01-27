@@ -12,6 +12,12 @@ permissions:
 jobs:
   build:
     runs-on: self-hosted
+    env:
+      VITE_CLERK_PUBLISHABLE_KEY: ${{ vars.VITE_CLERK_PUBLISHABLE_KEY }}
+      VITE_API_URL: ${{ vars.VITE_API_URL }}
+      VITE_GA_MEASUREMENT_ID: ${{ vars.VITE_GA_MEASUREMENT_ID }}
+      VITE_GA_DEBUG_MODE: ${{ vars.VITE_GA_DEBUG_MODE }}
+      VITE_ENV: ${{ vars.VITE_ENV }}
     steps:
       - uses: actions/checkout@v4
 
