@@ -18,5 +18,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.TOKEN_GITHUB_COM }}
         run: |
-          git remote add githubcom https://$GH_TOKEN@github.com/currentcrisis123/web-backend.git
+          if git remote get-url githubcom >/dev/null 2>&1; then
+            git remote set-url githubcom https://$GH_TOKEN@github.com/currentcrisis123/web-backend.git
+          else
+            git remote add githubcom https://$GH_TOKEN@github.com/currentcrisis123/web-backend.git
+          fi
           git push --mirror githubcom
