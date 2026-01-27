@@ -20,7 +20,6 @@ function DeveloperCard({ photo, name, linkedin, role, leadership }: DeveloperCar
 
                 window.location.reload();
             } catch (error) {
-                // console.error('Error deleting developer:', error);
                 alert('Failed to delete developer. Please try again.');
             }
         }
