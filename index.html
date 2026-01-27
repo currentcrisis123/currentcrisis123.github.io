@@ -18,6 +18,16 @@
     <title>Current Crisis</title>
   </head>
   <body>
+    <script>
+      (function () {
+        var base = "/pages/Gaming-for-Electric-Power-Grids/CurrentCrisis";
+        var redirect = window.sessionStorage.getItem("redirect");
+        if (!redirect) return;
+        window.sessionStorage.removeItem("redirect");
+        var normalized = redirect.charAt(0) === "/" ? redirect : "/" + redirect;
+        window.history.replaceState(null, "", base + normalized);
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
