@@ -31,7 +31,8 @@ app.use(
         "http://localhost:5174",
         "https://currentcrisis-test.netlify.app",
         "https://currentcrisis.net",
-        "https://www.currentcrisis.net"
+        "https://www.currentcrisis.net",
+        "https://github.gatech.edu"
       ];
 
       if (!origin) {
