@@ -1,0 +1,21 @@
+name: Mirror to GitHub.com
+on:
+  push:
+    branches: ["**"]
+    tags: ["**"]
+
+jobs:
+  mirror:
+    runs-on: [self-hosted, macOS, X64]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push mirror to GitHub.com
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN_GITHUB_COM }}
+        run: |
+          git remote add githubcom https://$GH_TOKEN@github.com/currentcrisis123/web-backend.git
+          git push --mirror githubcom
