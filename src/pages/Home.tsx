@@ -16,7 +16,7 @@ function Home() {
             <div className="hidden md:flex w-full overflow-hidden py-20 px-4">
                 <iframe
                     title="Unity WebGL"
-                    src="/unity/index.html"
+                    src={`${import.meta.env.BASE_URL}unity/index.html`}
                     width="100%"
                     height="100%"
                     allowFullScreen
