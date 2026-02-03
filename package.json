@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"vite\" \"npm run dev:backend\"",
+    "dev:backend": "cd ./backend && npm run dev",
     "copy-unity": "node copy-unity.js",
     "prebuild": "npm run copy-unity",
     "build": "vite build",
@@ -23,6 +24,7 @@
     "@mui/material": "^7.1.0",
     "@netlify/functions": "^4.2.2",
     "axios": "^1.9.0",
+    "concurrently": "^9.2.1",
     "highlight.js": "11.8.0",
     "katex": "^0.16.22",
     "lucide-react": "^0.511.0",

@@ -1,0 +1,20 @@
+name: Warm Render Health Check
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+jobs:
+  warm:
+    runs-on: self-hosted
+    steps:
+      - name: Ping Render health endpoint
+        env:
+          RENDER_HEALTH_URL: ${{ secrets.RENDER_HEALTH_URL }}
+        run: |
+          if [ -z "$RENDER_HEALTH_URL" ]; then
+            echo "Missing RENDER_HEALTH_URL secret" >&2
+            exit 1
+          fi
+          curl -fsS "$RENDER_HEALTH_URL" >/dev/null
