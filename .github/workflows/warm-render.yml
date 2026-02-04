@@ -2,12 +2,14 @@ name: Warm Render Health Check
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/45 * * * *"
   workflow_dispatch:
 
 jobs:
   warm:
     runs-on: self-hosted
+    environment:
+      name: github-pages
     steps:
       - name: Ping Render health endpoint
         env:
