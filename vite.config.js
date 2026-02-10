@@ -3,14 +3,11 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base:
-    mode === "production"
-      ? "/pages/Gaming-for-Electric-Power-Grids/CurrentCrisis/"
-      : "/",
+  base: "/",
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:",
+        target: "http://localhost:5000",
         changeOrigin: true,
         secure: false,
       },
