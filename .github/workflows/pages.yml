@@ -16,6 +16,7 @@ concurrency:
 jobs:
   build:
     if: ${{ github.server_url != 'https://github.gatech.edu' }}
+    environment: github-pages
     runs-on: ubuntu-latest
     env:
       VITE_CLERK_PUBLISHABLE_KEY: ${{ vars.VITE_CLERK_PUBLISHABLE_KEY }}
